@@ -1,7 +1,8 @@
 # vortspell
 
-Usage: index [options] [command]
+Usage:
 
+    index [options] [command]
 
 Commands:
 
