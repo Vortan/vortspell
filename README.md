@@ -1,9 +1,23 @@
-## Usage
+# vortspell
+
+Usage: index [options] [command]
+
+
+Commands:
+
+    correct <word>  Return suggestions for mispelled word
+
+Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+    -w, --western  Spellcheck in Western Armenian (default is Eastern)
+
+## Example
 
 ``` bash
 npm install
-npm 
-npm run correct վորթ
+node index.js correct վորթ
 
 >> [ false, [ 'որթ', 'մորթ', 'տորթ', 'հորթ', 'խորթ', 'չթվոր' ] ]
 ```
