@@ -1,0 +1,33 @@
+{
+  "name": "vortspell",
+  "version": "0.0.2",
+  "description": "armenian spellchecker that uses hunspell",
+  "license": "ISC",
+  "main": "index.js",
+  "author": "Souren Papazian",
+  "scripts": {
+    "accuracy": "node ./test/accuracy-test.js", 
+    "correct": "node ./index.js correct"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "bluebird": "^2.9.27",
+    "chai": "^3.0.0",
+    "colors": "^1.1.2",
+    "commander": "^2.8.1",
+    "lodash": "^3.7.0",
+    "mocha": "^2.2.5",
+    "nodehun": "^2.0.10"
+  },
+  "bin": {
+    "armspell": "./index.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "armenian",
+    "spellchecker"
+  ],
+  "homepage": "vortan.github.io"
+}
