@@ -11,7 +11,7 @@ commander
 
 commander
   .command('correct <word>')
-  .description('Return suggestions for mispelled word')
+  .description('Return suggestions for misspelled word')
   .action(function(word) {
     src
     .init(commander)

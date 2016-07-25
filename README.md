@@ -2,18 +2,24 @@
 
 Usage:
 
+```
   index [options] [command]
+```
 
 Commands:
 
-  correct <word>  Return suggestions for mispelled word
+```
+  correct <word>  Return suggestions for misspelled word
+```
 
 Options:
 
+```
   -h, --help             output usage information
   -V, --version          output the version number
   -w, --western          Spellcheck using Western Armenian dictionary (default is Eastern)
   -c, --custom <custom>  Spellcheck using custom dictionary
+```
 
 
 
