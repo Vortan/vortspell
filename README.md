@@ -2,17 +2,20 @@
 
 Usage:
 
-    index [options] [command]
+  index [options] [command]
 
 Commands:
 
-    correct <word>  Return suggestions for mispelled word
+  correct <word>  Return suggestions for mispelled word
 
 Options:
 
-    -h, --help     output usage information
-    -V, --version  output the version number
-    -w, --western  Spellcheck in Western Armenian (default is Eastern)
+  -h, --help             output usage information
+  -V, --version          output the version number
+  -w, --western          Spellcheck using Western Armenian dictionary (default is Eastern)
+  -c, --custom <custom>  Spellcheck using custom dictionary
+
+
 
 ## Example
 
@@ -47,4 +50,3 @@ npm run accuracy
 * ն - մ
 * զ - ս
 * ժ - շ
-
