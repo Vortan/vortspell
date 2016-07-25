@@ -5,16 +5,22 @@ var src = require('./src/program');
 commander
   .version(require('./package.json').version)
   .option('-w, --western',
-          'Spellcheck in Western Armenian (default is Eastern)')
+          'Spellcheck using Western Armenian dictionary (default is Eastern)')
+  .option('-c, --custom <custom>',
+          'Spellcheck using custom dictionary')
 
 commander
   .command('correct <word>')
   .description('Return suggestions for mispelled word')
   .action(function(word) {
     src
-    .correct(word, commander)
-    .then(console.log)
-    .catch(console.error);
+    .init(commander)
+    .then(function(dict) {
+      src
+      .correct(word, dict)
+      .then(console.log)
+      .catch(console.error);
+    });
   });
 
 commander
