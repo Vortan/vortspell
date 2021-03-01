@@ -6,7 +6,7 @@ const colors = require('colors');
 const testfile = path.join(path.dirname(fs.realpathSync(__filename)), './data/rubina.json');
 
 const words = require(testfile);
-verbose = false;
+verbose = true;
 total = 0;
 bad = 0;
 commander = {
@@ -23,11 +23,12 @@ src
       var iscorrect = val[0],
           suggestions = val[1]
       total += 1;
-      if (suggestions.indexOf(correct) > -1) {
-        if (verbose) console.log(colors.green(correct));
+      if (iscorrect == true || suggestions.indexOf(correct) >= 0) {
+          // This test assumes that all words fed in are incorrect so we will count this as bad
+          bad += 1
+          if (verbose) console.log(colors.red(correct));
       } else {
-        bad += 1
-        if (verbose) console.log(colors.red(correct));
+        if (verbose) console.log(colors.green(correct));
       }
       callback(); // show that no errors happened
     })

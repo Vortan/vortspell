@@ -19,7 +19,7 @@ module.exports = function(commander) {
       affbuf = fs.readFileSync(dictionaryDir+'/armenian_eastern.aff');
       dicbuf = fs.readFileSync(dictionaryDir+'/armenian_eastern.dic');
     }
-    dict = new nodehun(affbuf,dicbuf);
+    dict = new nodehun(affbuf, dicbuf)
     resolve(dict);
   });
 };
