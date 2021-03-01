@@ -6,7 +6,7 @@
   "main": "index.js",
   "author": "Souren Papazian <souren@papazian.info>",
   "scripts": {
-    "accuracy": "node ./test/accuracy-test.js", 
+    "accuracy": "node ./test/accuracy-test.js",
     "correct": "node ./index.js correct"
   },
   "repository": {
@@ -21,10 +21,10 @@
     "commander": "^2.8.1",
     "lodash": "^3.7.0",
     "mocha": "^2.2.5",
-    "nodehun": "^2.0.10"
+    "nodehun": "^3.0.2"
   },
   "bin": {
-    "armspell": "./index.js"
+    "armspell": "index.js"
   },
   "directories": {
     "test": "test"
