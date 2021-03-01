@@ -23,12 +23,14 @@ src
       var iscorrect = val[0],
           suggestions = val[1]
       total += 1;
-      if (iscorrect == true || suggestions.indexOf(correct) >= 0) {
-          // This test assumes that all words fed in are incorrect so we will count this as bad
+      if (iscorrect || suggestions == null || suggestions.indexOf(correct) < 0) {
+          // This test assumes that all words fed in are incorrect so we will count iscorrect as bad
           bad += 1
-          if (verbose) console.log(colors.red(correct));
+          process.stdout.write(colors.red("X"));
+          if (verbose) console.log(" > incorrect", incorrect, "| correct", correct, "| suggestions", suggestions != null ? suggestions : "thinks word is correct")
       } else {
-        if (verbose) console.log(colors.green(correct));
+          process.stdout.write(colors.green("O"));
+          if (verbose) console.log(" > incorrect", incorrect, "| correct", correct, "| suggestions", suggestions != null ? suggestions : "thinks word is correct")
       }
       callback(); // show that no errors happened
     })
